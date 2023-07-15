@@ -5,6 +5,7 @@ class Anagram:
     def match(self, anagram):
         list = []
         for i in anagram:
-            if sorted(j for j in i) == self.wordSorted:
+            anagramSorted = sorted(j for j in i)
+            if anagramSorted == self.wordSorted:
                 list.append(i)
         return list
